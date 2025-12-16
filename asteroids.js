@@ -162,7 +162,7 @@ const imports = { env: { memory, sin: Math.sin, cos: Math.cos, atan2: Math.atan2
 // const bytes = fs.readFileSync('./step.wasm');
 // await fetch for bytes from ../step.wasm
 // (our makefile compiled step.cpp into step.wasm web assembly)
-const resp = await fetch("../step.wasm");  // download the compiled bytes
+const resp = await fetch("step.wasm");  // download the compiled bytes
 const bytes = await resp.arrayBuffer(); // get as array buffer
 const mod = new WebAssembly.Module(bytes); 
 const instance = new WebAssembly.Instance(mod, imports);
